@@ -1,0 +1,146 @@
+// 415px
+@media only screen and (min-width: 23.055em) {
+	.rounded-rectangle {
+		height: 19rem;
+	}
+}
+// 500
+@media only screen and (min-width: 27.7778em) {
+	.rounded-rectangle {
+		height: 25rem;
+	}
+}
+
+// 700
+
+@media only screen and (min-width: 38.8888em) {
+	.cards {
+		display: grid !important;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 4rem;
+		margin-top: 4rem;
+		.card {
+			margin-top: 0 !important;
+			&:last-of-type {
+				grid-column: 1/-1;
+				justify-self: center;
+				align-self: center;
+			}
+		}
+	}
+	footer {
+		ul {
+			flex-direction: row;
+			justify-content: space-between;
+			li {
+				margin-bottom: 0 !important;
+			}
+		}
+	}
+}
+@media only screen and (min-width: 59.8888em) {
+	.max-w-100 {
+		max-width: none;
+	}
+	h1 {
+		text-align: left;
+	}
+	.intro {
+		padding: 8rem 0;
+		.container {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			align-items: center;
+			grid-column-gap: 4rem;
+			justify-content: center;
+		}
+		height: 100%;
+		p {
+			text-align: left;
+		}
+		.buttons {
+			display: flex;
+		}
+		.hero {
+			order: 2;
+
+			img {
+				width: 100%;
+			}
+		}
+		.my-4 {
+			margin: 0 !important;
+		}
+	}
+	.ham {
+		display: none;
+	}
+	#features {
+		ul {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-bottom: 1px solid rgba(128, 128, 128, 0.486);
+			width: 61rem;
+			margin: 0 auto;
+			li {
+				border-top: none !important;
+				border-bottom: none !important;
+				&:hover {
+					color: hsl(0, 94%, 66%);
+				}
+				&:not(:last-of-type) {
+					margin-right: 4rem;
+				}
+			}
+			.active-feature::after {
+				width: 100% !important;
+			}
+		}
+		.main {
+			display: grid !important;
+			grid-template-columns: repeat(2, 1fr);
+			grid-column-gap: 4rem;
+			align-items: center;
+			img {
+				width: 100%;
+			}
+			h2,
+			p {
+				text-align: left;
+			}
+		}
+	}
+	.cards {
+		grid-template-columns: repeat(3, 1fr);
+		margin-top: 18rem;
+
+		.card:last-of-type {
+			grid-row: 1/2;
+			grid-column: 3/4;
+			justify-self: stretch;
+		}
+		.card:nth-of-type(1) {
+			transform: translateY(-8rem);
+		}
+		.card:nth-of-type(2) {
+			transform: translateY(-4rem);
+		}
+	}
+	#uptodate {
+		h2 {
+			width: 30%;
+			margin: 0 auto;
+		}
+	}
+	.form {
+		display: grid;
+		grid-column-gap: 4rem;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		margin-top: 4rem;
+	}
+	.container {
+		width: 80% !important;
+	}
+}
