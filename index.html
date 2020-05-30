@@ -4,27 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- displays site properly based on user's device -->
+
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
     <title>Frontend Mentor | Bookmark landing page</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-        .attribution {
-            font-size: 11px;
-            text-align: center;
-        }
-
-        .attribution a {
-            color: hsl(228, 45%, 44%);
-        }
-    </style>
     <link rel="stylesheet" href="./dist/CSS/main.css">
+    <script src="./dist/Js/index.js" defer></script>
 </head>
 
 <body>
+    <div class="mobile-nav">
+        <div class="container">
+            <header class="flex between align-center py-2">
+                <img src="./dist/images/logo-bookmark-white-nav.svg" alt="logo" class="logo">
+                <img src="./dist/images/icon-close.svg" id="close">
+            </header>
+        </div>
+        <hr />
+        <div class="container">
+            <ul class="relative">
+                <li class="text-center"><a href="#">
+                        FEATURES
+                    </a></li>
+                <li class="text-center"><a href="#">
+                        PRICING
+                    </a></li>
+                <li class="text-center"><a href="#">
+                        CONTACT
+                    </a></li>
+                <li class="text-center">
+                    <button class="btn">
+                        <a href="#">LOGIN</a>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div class="footer">
+            <img src="./dist/images/icon-facebook.svg">
+            <img src="./dist/images/icon-twitter.svg">
+
+        </div>
+    </div>
     <header class="relative intro">
         <nav class="py-4 w-100 flex align-center">
             <div class="container">
@@ -36,7 +58,18 @@
                         <a href="#"><img src="./dist/images/icon-hamburger.svg" alt="Hamburger Menu Icon"
                                 class="ham-icon"></a>
                     </li>
+
                 </ul>
+                <div class="desktop-items">
+                    <ul class="flex align-center">
+                        <li><a href="#">FEATURES</a></li>
+                        <li><a href="#">PRICING</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                        <li><button class="btn btn-red red">
+                                <a href="#">LOGIN</a>
+                            </button></li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <div class="rounded-rectangle blue absolute"></div>
@@ -75,9 +108,9 @@
             </p>
             <div class="list-features my-4">
                 <ul class="text-center">
-                    <li class="active-feature py-2 "><a href="#">Simple Bookmarking</a></li>
-                    <li class="py-2"><a href="#">Speedy Searching</a></li>
-                    <li class="py-2"><a href="#">Easy Sharing</a></li>
+                    <li class="active-feature py-2" data-feature="simple"><a href="#">Simple Bookmarking</a></li>
+                    <li class="py-2" data-feature="speedy"><a href="#">Speedy Searching</a></li>
+                    <li class="py-2" data-feature="easy"><a href="#">Easy Sharing</a></li>
                 </ul>
             </div>
 
@@ -85,15 +118,16 @@
 
                 <div class="rounded-rectangle blue absolute"></div>
                 <div class="main">
-                    <div class="showcase">
-                        <img src="./dist/images/illustration-features-tab-1.svg" alt="Feature 1"
-                            class="max-w-100 z-10 relative my-4">
+                    <div class="showcase animated z-10">
+                        <img src="./dist/images/illustration-features-tab-1.svg" alt="Feature"
+                            class="max-w-100 relative my-4">
                     </div>
-                    <div class="content my-4">
+                    <div class="content my-4 animated">
                         <h2 class="text-center">Bookmark in one click</h2>
                         <p class="gray text-center">Organize your bookmarks however you like. Our simple drag-and-drop
                             interface
                             gives you complete control over how you manage your favourite sites.</p>
+                        <div class="btn btn-blue blue my-2 flex">More Info</div>
                     </div>
                 </div>
 
@@ -157,7 +191,7 @@
             <p class="text-center gray my-2">Here are some of our FAQs. If you have any other questions you’d like
                 answered please feel free to email us.</p>
             <ul class="questions my-4">
-                <li class="py-1">
+                <li class="py-1 question-header">
                     <header class="flex align-center between">
                         <div class="question">What is Bookmark?</div>
                         <img src="./dist/images/icon-arrow.svg">
@@ -166,7 +200,7 @@
                         tincidunt
                         justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</div>
                 </li>
-                <li class="py-1">
+                <li class="py-1 question-header">
                     <header class="flex align-center between">
                         <div class="question">How can I request a new browser?</div>
                         <img src="./dist/images/icon-arrow.svg">
@@ -178,19 +212,19 @@
                         ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
                         Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</div>
                 </li>
-                <li class="py-1">
+                <li class="py-1 question-header">
                     <header class="flex align-center between">
                         <div class="question">Is there a mobile app?</div>
                         <img src="./dist/images/icon-arrow.svg">
                     </header>
-                    <div class="answer gray active-answer"> Sed consectetur quam id neque fermentum accumsan. Praesent
+                    <div class="answer gray"> Sed consectetur quam id neque fermentum accumsan. Praesent
                         luctus
                         vestibulum
                         dolor, ut condimentum
                         urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
                         sollicitudin ex et ultricies bibendum.</div>
                 </li>
-                <li class="py-1">
+                <li class="py-1 question-header">
                     <header class="flex align-center between">
                         <div class="question">What about other Chromium browsers?</div>
                         <img src="./dist/images/icon-arrow.svg">
